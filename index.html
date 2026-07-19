@@ -1,217 +1,361 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ClauseLens — The contract toolkit that won''t cite law it can''t verify</title>
-<meta name="description" content="A locally-run AI toolkit for solo and small-firm attorneys. Eleven tools for review, drafting, and practice management. One-time purchase." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/kusam/Downloads/clauselens-index_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClauseLens — The contract toolkit that won't cite law it can't verify</title>
+<meta name="description" content="A desktop AI toolkit for solo and small-firm attorneys. Eleven tools for review, drafting, and practice management. Runs on your machine. One-time purchase — no subscription.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./ClauseLens — The contract toolkit that won&#39;t cite law it can&#39;t verify_files/css2" rel="stylesheet">
 <style>
-:root{--ink:#191c22;--paper:#f1f3f6;--card:#fff;--line:#d9dde4;--muted:#565e6c;--seal:#7a2230;--seal-ink:#5f1a25;--flag:#9a6b00;--ok:#1f6d4a}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"Inter",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.5}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-h1,h2,h3,.serif{font-family:"Spectral",Georgia,serif}
-a{color:inherit}
-header.site{border-bottom:1px solid var(--line);background:rgba(241,243,246,.85);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-family:"Spectral",serif;font-weight:600;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
-.brand .mark{width:22px;height:22px;border:2px solid var(--seal);border-radius:50%;position:relative;flex:none}
-.brand .mark::after{content:"";position:absolute;width:9px;height:2px;background:var(--seal);right:-5px;bottom:-1px;transform:rotate(45deg);transform-origin:left}
-.nav-links{display:flex;gap:26px;align-items:center;font-size:14px}
-.nav-links a{text-decoration:none;color:var(--muted)}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{background:var(--ink);color:#fff;padding:9px 16px;border-radius:7px;text-decoration:none;font-size:14px;font-weight:500}
-@media(max-width:720px){.nav-links a:not(.nav-cta){display:none}}
-.hero{padding:76px 0 60px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--seal);font-weight:600;margin-bottom:22px}
-.eyebrow::before{content:"";width:26px;height:1px;background:var(--seal)}
-.hero h1{font-size:clamp(34px,5.4vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.02em;max-width:16ch}
-.hero h1 em{font-style:italic;color:var(--seal)}
-.hero p.lead{font-size:19px;color:var(--muted);max-width:52ch;margin:24px 0 32px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:13px 24px;border-radius:8px;cursor:pointer;border:1px solid transparent}
-.btn-primary{background:var(--seal);color:#fff}
-.btn-primary:hover{background:var(--seal-ink)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-ghost:hover{border-color:var(--ink)}
-.hero-note{font-size:13px;color:var(--muted);margin-top:16px}
-.hero-note strong{color:var(--ink);font-weight:600}
-.proof{margin-top:38px;border-left:3px solid var(--seal);padding:4px 0 4px 22px;max-width:60ch}
-.proof-quote{font-family:"Spectral",serif;font-style:italic;font-size:21px;color:var(--ink);line-height:1.3;margin-bottom:12px}
-.proof p{font-size:14.5px;color:var(--muted);line-height:1.62}
-.proof em{font-style:italic;color:#33383f}
-.clause{margin-top:52px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 0 rgba(25,28,34,.04),0 18px 40px -24px rgba(25,28,34,.25)}
-.clause-bar{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted);letter-spacing:.04em}
-.dot{width:10px;height:10px;border-radius:50%;background:#e0e3e8}
-.clause-body{padding:26px 30px;font-family:"Spectral",serif;font-size:16px;line-height:1.85;color:#33383f}
-.clause-body .flagged{background:linear-gradient(transparent 62%, rgba(122,34,48,.18) 62%);padding:0 2px}
-.lens{display:flex;gap:12px;margin-top:20px;padding:14px 16px;background:#faf6f2;border:1px solid #ecdcd6;border-radius:9px;font-family:"Inter",sans-serif;font-size:13.5px;line-height:1.5}
-.lens .tag{flex:none;font-weight:600;color:var(--seal);text-transform:uppercase;letter-spacing:.06em;font-size:11px;padding-top:2px}
-section{padding:72px 0}
-.sec-label{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
-h2.sec{font-size:clamp(26px,3.6vw,38px);font-weight:600;letter-spacing:-.02em;line-height:1.12;max-width:20ch}
-.sec-intro{color:var(--muted);font-size:17px;max-width:56ch;margin-top:16px}
-.refuse{background:var(--ink);color:#eef0f3}
-.refuse .sec-label{color:#a7aebb}
-.refuse h2.sec{color:#fff}
-.refuse .sec-intro{color:#b8bfca}
-.refuse .sec-intro em{color:#e2c9cd;font-style:italic}
-.refuse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
-@media(max-width:760px){.refuse-grid{grid-template-columns:1fr}}
-.refuse-card{border:1px solid #2c313b;border-radius:11px;padding:24px;background:#20242c}
-.refuse-card .x{font-family:"Spectral",serif;font-size:15px;color:#e8a0a0;font-weight:600;margin-bottom:10px;display:flex;gap:8px;align-items:baseline}
-.refuse-card .x span{color:#c25b5b}
-.refuse-card p{font-size:14px;color:#aab2bf;line-height:1.55}
-.refuse-card code{background:#2c313b;padding:1px 5px;border-radius:4px;font-size:12px}
-.refuse-foot{margin-top:34px;padding-top:26px;border-top:1px solid #2c313b;font-size:15px;color:#cdd3dc;max-width:64ch}
-.refuse-foot strong{color:#fff;font-weight:600}
-.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
-@media(max-width:760px){.tools-grid{grid-template-columns:1fr}}
-.tool{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:26px 26px 24px}
-.tool .k{font-family:"Spectral",serif;font-size:12px;color:var(--seal);letter-spacing:.04em;margin-bottom:12px}
-.tool h3{font-size:19px;font-weight:600;letter-spacing:-.01em;margin-bottom:9px}
-.tool p{font-size:14.5px;color:var(--muted);line-height:1.58}
-.tool code{background:#f0eef0;padding:1px 5px;border-radius:4px;font-size:12.5px;color:var(--seal)}
-.privacy{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.privacy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:8px}
-@media(max-width:760px){.privacy-grid{grid-template-columns:1fr;gap:22px}}
-.pv h3{font-size:17px;font-weight:600;margin-bottom:7px}
-.pv p{font-size:14px;color:var(--muted);line-height:1.55}
-.pv .icon{font-family:"Spectral",serif;color:var(--seal);font-size:22px;margin-bottom:10px}
-.pv em{font-style:italic}
-#pricing{background:transparent}
-.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:760px;margin:44px auto 0}
-@media(max-width:640px){.price-grid{grid-template-columns:1fr}}
-.plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 30px;display:flex;flex-direction:column}
-.plan.featured{border-color:var(--seal);box-shadow:0 20px 46px -28px rgba(122,34,48,.5)}
-.plan .badge{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--seal);background:#f6e9ea;border-radius:999px;padding:4px 11px;margin-bottom:14px}
-.plan h3{font-family:"Spectral",serif;font-size:22px;font-weight:600}
-.plan .who{font-size:13.5px;color:var(--muted);margin:5px 0 20px}
-.plan .amt{display:flex;align-items:baseline;gap:8px}
-.plan .amt .num{font-family:"Spectral",serif;font-size:46px;font-weight:600;letter-spacing:-.02em}
-.plan .amt .once{font-size:13px;color:var(--muted)}
-.plan ul{list-style:none;margin:22px 0 26px;flex:1}
-.plan li{font-size:14px;padding:8px 0 8px 24px;position:relative;color:#3a404a;border-top:1px solid #eef0f3}
-.plan li:first-child{border-top:none}
-.plan li::before{content:"OK";content:"\2713";position:absolute;left:0;color:var(--ok);font-weight:700}
-.plan .buy{width:100%;text-align:center;border:none;cursor:pointer;font-weight:600;font-size:15px;padding:13px 0;border-radius:8px;background:var(--ink);color:#fff;font-family:inherit}
-.plan.featured .buy{background:var(--seal)}
-.plan .buy:hover{opacity:.92}
-.price-foot{text-align:center;color:var(--muted);font-size:13.5px;margin-top:24px}
-.faq{max-width:760px;margin:40px auto 0}
-details{border-bottom:1px solid var(--line);padding:20px 0}
-summary{font-family:"Spectral",serif;font-size:18px;font-weight:500;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--seal);font-size:22px;flex:none}
-details[open] summary::after{content:"\2013"}
-details p{color:var(--muted);font-size:15px;line-height:1.6;margin-top:14px;max-width:64ch}
-details code{background:#f0eef0;padding:1px 5px;border-radius:4px;font-size:13px;color:var(--seal)}
-footer.site{background:var(--ink);color:#c3cad4;padding:52px 0 40px;font-size:14px}
-.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid #2c313b}
-footer .brand{color:#fff}
-footer .brand .mark{border-color:#c98a92}
-footer .brand .mark::after{background:#c98a92}
-.foot-links{display:flex;gap:24px;flex-wrap:wrap}
-.foot-links a{color:#c3cad4;text-decoration:none}
-.foot-links a:hover{color:#fff}
-.foot-legal{margin-top:22px;font-size:12.5px;color:#8b93a1;line-height:1.7}
-#status{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(90px);background:var(--ink);color:#fff;font-size:14px;padding:12px 20px;border-radius:9px;opacity:0;transition:all .25s;max-width:90vw;z-index:50;border:1px solid #333}
-#status.show{opacity:1;transform:translateX(-50%) translateY(0)}
-#status.err{background:#7a2230}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--seal);outline-offset:3px}
+  :root{
+    --ink:#191c22;
+    --paper:#f1f3f6;
+    --card:#ffffff;
+    --line:#d9dde4;
+    --muted:#565e6c;
+    --seal:#7a2230;        /* oxblood — bar-association / legal seal */
+    --seal-ink:#5f1a25;
+    --flag:#9a6b00;        /* caution amber, used once */
+    --ok:#1f6d4a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    color:var(--ink);background:var(--paper);
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  h1,h2,h3,.serif{font-family:"Spectral",Georgia,serif}
+  a{color:inherit}
+
+  /* ---- header ---- */
+  header.site{border-bottom:1px solid var(--line);background:rgba(241,243,246,.85);
+    backdrop-filter:blur(8px);position:sticky;top:0;z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:"Spectral",serif;font-weight:600;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+  .brand .mark{width:22px;height:22px;border:2px solid var(--seal);border-radius:50%;position:relative;flex:none}
+  .brand .mark::after{content:"";position:absolute;width:9px;height:2px;background:var(--seal);
+    right:-5px;bottom:-1px;transform:rotate(45deg);transform-origin:left}
+  .nav-links{display:flex;gap:26px;align-items:center;font-size:14px}
+  .nav-links a{text-decoration:none;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{background:var(--ink);color:#fff;padding:9px 16px;border-radius:7px;
+    text-decoration:none;font-size:14px;font-weight:500}
+  @media(max-width:720px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* ---- hero ---- */
+  .hero{padding:76px 0 60px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--seal);font-weight:600;margin-bottom:22px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--seal)}
+  .hero h1{font-size:clamp(34px,5.4vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.02em;max-width:16ch}
+  .hero h1 em{font-style:italic;color:var(--seal)}
+  .hero p.lead{font-size:19px;color:var(--muted);max-width:52ch;margin:24px 0 32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;
+    padding:13px 24px;border-radius:8px;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:var(--seal);color:#fff}
+  .btn-primary:hover{background:var(--seal-ink)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .hero-note{font-size:13px;color:var(--muted);margin-top:16px}
+  .hero-note strong{color:var(--ink);font-weight:600}
+  .proof{margin-top:38px;border-left:3px solid var(--seal);padding:4px 0 4px 22px;max-width:60ch}
+  .proof-quote{font-family:"Spectral",serif;font-style:italic;font-size:21px;color:var(--ink);line-height:1.3;margin-bottom:12px}
+  .proof p{font-size:14.5px;color:var(--muted);line-height:1.62}
+  .proof em{font-style:italic;color:#33383f}
+
+  /* signature: a marked-up clause under review */
+  .clause{margin-top:52px;background:var(--card);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;box-shadow:0 1px 0 rgba(25,28,34,.04),0 18px 40px -24px rgba(25,28,34,.25)}
+  .clause-bar{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid var(--line);
+    font-size:12px;color:var(--muted);letter-spacing:.04em}
+  .dot{width:10px;height:10px;border-radius:50%;background:#e0e3e8}
+  .clause-body{padding:26px 30px;font-family:"Spectral",serif;font-size:16px;line-height:1.85;color:#33383f}
+  .clause-body .flagged{background:linear-gradient(transparent 62%, rgba(122,34,48,.18) 62%);
+    padding:0 2px;position:relative}
+  .lens{display:flex;gap:12px;margin-top:20px;padding:14px 16px;background:#faf6f2;
+    border:1px solid #ecdcd6;border-radius:9px;font-family:"Inter",sans-serif;font-size:13.5px;line-height:1.5}
+  .lens .tag{flex:none;font-weight:600;color:var(--seal);text-transform:uppercase;letter-spacing:.06em;font-size:11px;padding-top:2px}
+
+  /* ---- section scaffold ---- */
+  section{padding:72px 0}
+  .sec-label{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
+  h2.sec{font-size:clamp(26px,3.6vw,38px);font-weight:600;letter-spacing:-.02em;line-height:1.12;max-width:20ch}
+  .sec-intro{color:var(--muted);font-size:17px;max-width:56ch;margin-top:16px}
+
+  /* ---- the refusal (signature thesis) ---- */
+  .refuse{background:var(--ink);color:#eef0f3}
+  .refuse .sec-label{color:#a7aebb}
+  .refuse h2.sec{color:#fff}
+  .refuse .sec-intro{color:#b8bfca}
+  .refuse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+  @media(max-width:760px){.refuse-grid{grid-template-columns:1fr}}
+  .refuse-card{border:1px solid #2c313b;border-radius:11px;padding:24px;background:#20242c}
+  .refuse-card .x{font-family:"Spectral",serif;font-size:15px;color:#e8a0a0;font-weight:600;margin-bottom:10px;display:flex;gap:8px;align-items:baseline}
+  .refuse-card .x span{color:#c25b5b}
+  .refuse-card p{font-size:14px;color:#aab2bf;line-height:1.55}
+  .refuse-foot{margin-top:34px;padding-top:26px;border-top:1px solid #2c313b;font-size:15px;color:#cdd3dc;max-width:64ch}
+  .refuse-foot strong{color:#fff;font-weight:600}
+
+  /* ---- tools ---- */
+  .tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
+  @media(max-width:760px){.tools-grid{grid-template-columns:1fr}}
+  .tool{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:26px 26px 24px}
+  .tool .k{font-family:"Spectral",serif;font-size:12px;color:var(--seal);letter-spacing:.04em;margin-bottom:12px}
+  .tool h3{font-size:19px;font-weight:600;letter-spacing:-.01em;margin-bottom:9px}
+  .tool p{font-size:14.5px;color:var(--muted);line-height:1.58}
+  .tool ul{list-style:none;margin-top:12px;font-size:13.5px;color:var(--muted)}
+  .tool li{padding-left:16px;position:relative;margin-top:5px}
+  .tool li::before{content:"—";position:absolute;left:0;color:var(--seal)}
+  .placeholder{border-style:dashed;background:#fbfcfd}
+  .placeholder .k{color:var(--flag)}
+
+  /* ---- privacy strip ---- */
+  .privacy{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .privacy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:8px}
+  @media(max-width:760px){.privacy-grid{grid-template-columns:1fr;gap:22px}}
+  .pv h3{font-size:17px;font-weight:600;margin-bottom:7px}
+  .pv p{font-size:14px;color:var(--muted);line-height:1.55}
+  .pv .icon{font-family:"Spectral",serif;color:var(--seal);font-size:22px;margin-bottom:10px}
+
+  /* ---- pricing ---- */
+  #pricing{background:transparent}
+  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:760px;margin:44px auto 0}
+  @media(max-width:640px){.price-grid{grid-template-columns:1fr}}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 30px;display:flex;flex-direction:column}
+  .plan.featured{border-color:var(--seal);box-shadow:0 20px 46px -28px rgba(122,34,48,.5)}
+  .plan .badge{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--seal);background:#f6e9ea;border-radius:999px;padding:4px 11px;margin-bottom:14px}
+  .plan h3{font-family:"Spectral",serif;font-size:22px;font-weight:600}
+  .plan .who{font-size:13.5px;color:var(--muted);margin:5px 0 20px}
+  .plan .amt{display:flex;align-items:baseline;gap:8px}
+  .plan .amt .num{font-family:"Spectral",serif;font-size:46px;font-weight:600;letter-spacing:-.02em}
+  .plan .amt .once{font-size:13px;color:var(--muted)}
+  .plan ul{list-style:none;margin:22px 0 26px;flex:1}
+  .plan li{font-size:14px;padding:8px 0 8px 24px;position:relative;color:#3a404a;border-top:1px solid #eef0f3}
+  .plan li:first-child{border-top:none}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
+  .plan .buy{width:100%;text-align:center;border:none;cursor:pointer;font-weight:600;font-size:15px;
+    padding:13px 0;border-radius:8px;background:var(--ink);color:#fff;font-family:inherit}
+  .plan.featured .buy{background:var(--seal)}
+  .plan .buy:hover{opacity:.92}
+  .price-foot{text-align:center;color:var(--muted);font-size:13.5px;margin-top:24px}
+
+  /* ---- faq ---- */
+  .faq{max-width:760px;margin:40px auto 0}
+  details{border-bottom:1px solid var(--line);padding:20px 0}
+  summary{font-family:"Spectral",serif;font-size:18px;font-weight:500;cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--seal);font-size:22px;flex:none}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);font-size:15px;line-height:1.6;margin-top:14px;max-width:64ch}
+
+  /* ---- footer ---- */
+  footer.site{background:var(--ink);color:#c3cad4;padding:52px 0 40px;font-size:14px}
+  .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid #2c313b}
+  footer .brand{color:#fff}
+  footer .brand .mark{border-color:#c98a92}
+  footer .brand .mark::after{background:#c98a92}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}
+  .foot-links a{color:#c3cad4;text-decoration:none}
+  .foot-links a:hover{color:#fff}
+  .foot-legal{margin-top:22px;font-size:12.5px;color:#8b93a1;line-height:1.7}
+
+  #status{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(90px);
+    background:var(--ink);color:#fff;font-size:14px;padding:12px 20px;border-radius:9px;opacity:0;
+    transition:all .25s;max-width:90vw;z-index:50;border:1px solid #333}
+  #status.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  #status.err{background:#7a2230}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--seal);outline-offset:3px}
 </style>
-</head>
+<link rel="stylesheet" type="text/css" href="./ClauseLens — The contract toolkit that won&#39;t cite law it can&#39;t verify_files/paddle.css" media="all"></head>
 <body>
+
 <header class="site">
   <div class="wrap nav">
     <div class="brand"><span class="mark"></span>ClauseLens</div>
     <nav class="nav-links">
-      <a href="#refuse">Why it&#39;s different</a>
-      <a href="#tools">Tools</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a href="#pricing" class="nav-cta">Get ClauseLens</a>
+      <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#refuse">Why it's different</a>
+      <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#tools">Tools</a>
+      <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#pricing">Pricing</a>
+      <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#faq">FAQ</a>
+      <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#pricing" class="nav-cta">Get ClauseLens</a>
     </nav>
   </div>
 </header>
+
+<!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">For solo &amp; small-firm attorneys</span>
-    <h1>The contract toolkit that <em>won''t cite law it can''t verify.</em></h1>
+    <h1>The contract toolkit that <em>won't cite law it can't verify.</em></h1>
     <p class="lead">Eleven tools for reviewing, drafting, and running a small practice — built so the AI never invents a case, a statute, or a citation. It runs on your own computer. Your files never leave your machine.</p>
     <div class="hero-cta">
-      <a href="#pricing" class="btn btn-primary">See pricing</a>
-      <a href="#refuse" class="btn btn-ghost">Why it refuses to research law</a>
+      <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#pricing" class="btn btn-primary">See pricing</a>
+      <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#refuse" class="btn btn-ghost">Why it refuses to research law</a>
     </div>
     <p class="hero-note"><strong>One-time purchase.</strong> No subscription. Try everything free in Demo mode before you buy.</p>
+
+    <!-- proof bar: the sanction that made this a real risk -->
     <div class="proof">
       <div class="proof-quote">"The cases were fabricated. The sanction was not."</div>
-      <p>In <em>Mata v. Avianca</em> (S.D.N.Y. 2023), a federal judge sanctioned two attorneys under Rule&nbsp;11 after they filed a brief citing six court decisions that a general-purpose AI had invented. It became the defining cautionary tale of AI in law — and it&#39;s exactly the failure ClauseLens is engineered to make impossible: it never generates a citation, because it never claims to know the law.</p>
+      <p>In <em>Mata v. Avianca</em> (S.D.N.Y. 2023), a federal judge sanctioned two attorneys under Rule&nbsp;11 after they filed a brief citing six court decisions that a general-purpose AI had invented. It became the defining cautionary tale of AI in law — and it's exactly the failure ClauseLens is engineered to make impossible: it never generates a citation, because it never claims to know the law.</p>
     </div>
-    <div class="clause">
-      <div class="clause-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span>&nbsp;&nbsp;Master Services Agreement — Section 9 Indemnification</div>
+
+    <!-- signature: a clause under the lens -->
+    <div class="clause" aria-label="Example clause review">
+      <div class="clause-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span>&nbsp;&nbsp;Master Services Agreement — §9 Indemnification</div>
       <div class="clause-body">
         The Provider shall indemnify, defend, and hold harmless the Client from any and all claims
         <span class="flagged">without limitation as to amount and regardless of the cause,</span>
-        including claims arising from the Client''s own negligence.
+        including claims arising from the Client's own negligence.
         <div class="lens">
           <span class="tag">Lens</span>
-          <span>Uncapped indemnity that reaches the counterparty''s own negligence. Flagged for review. ClauseLens marks the exposure and the reasoning — it does not tell you the governing law or cite a case for it. That call stays with you.</span>
+          <span>Uncapped indemnity that reaches the counterparty's own negligence. Flagged for review. ClauseLens marks the exposure and the reasoning — it does not tell you the governing law or cite a case for it. That call stays with you.</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- THE REFUSAL (thesis) -->
 <section class="refuse" id="refuse">
   <div class="wrap">
     <div class="sec-label">The line we drew on purpose</div>
-    <h2 class="sec">What ClauseLens will not do — and why that&#39;s the point.</h2>
-    <p class="sec-intro">Since <em>Mata v. Avianca</em>, fabricated-citation sanctions have spread — from a former Trump attorney''s Google Bard filing to a Second Circuit grievance referral in 2024. The pattern is always the same: an AI that will invent an authority rather than admit it doesn''t know one. ClauseLens closes that door by design.</p>
+    <h2 class="sec">What ClauseLens will not do — and why that's the point.</h2>
+    <p class="sec-intro">Since <em>Mata v. Avianca</em>, fabricated-citation sanctions have spread — from a former Trump attorney's Google Bard filing to a Second Circuit grievance referral in 2024. The pattern is always the same: an AI that will invent an authority rather than admit it doesn't know one. ClauseLens closes that door by design.</p>
     <div class="refuse-grid">
-      <div class="refuse-card"><div class="x"><span>X</span> No case-law or statute research</div><p>It doesn''t search or summarize authorities. Legal research stays in the tools you already trust for it.</p></div>
-      <div class="refuse-card"><div class="x"><span>X</span> No invented citations</div><p>The drafting engine is instructed never to cite law. If it can''t verify an authority, it doesn''t produce one.</p></div>
-      <div class="refuse-card"><div class="x"><span>X</span> No hidden jurisdiction guesses</div><p>Anything state-specific is written as an explicit <code>[PLACEHOLDER]</code> for you to fill — never quietly assumed.</p></div>
+      <div class="refuse-card">
+        <div class="x"><span>✕</span> No case-law or statute research</div>
+        <p>It doesn't search or summarize authorities. Legal research stays in the tools you already trust for it.</p>
+      </div>
+      <div class="refuse-card">
+        <div class="x"><span>✕</span> No invented citations</div>
+        <p>The drafting engine is instructed never to cite law. If it can't verify an authority, it doesn't produce one.</p>
+      </div>
+      <div class="refuse-card">
+        <div class="x"><span>✕</span> No hidden jurisdiction guesses</div>
+        <p>Anything state-specific is written as an explicit <code>[placeholder]</code> for you to fill — never quietly assumed.</p>
+      </div>
     </div>
     <p class="refuse-foot"><strong>What it does instead:</strong> it reads, extracts, flags, drafts, and organizes — with sources pointed to the document in front of you, not to the case reporter. You stay the lawyer. It stays a tool.</p>
   </div>
 </section>
+
+<!-- TOOLS -->
 <section id="tools">
   <div class="wrap">
-    <div class="sec-label">One dashboard  eleven tools</div>
+    <div class="sec-label">One dashboard · eleven tools</div>
     <h2 class="sec">Everything a solo practice touches — in one local app.</h2>
-    <p class="sec-intro">Review, drafting, intake, deadlines, billing, and flat-fee pricing, connected. Here&#39;s the full set that ships in v5.</p>
+    <p class="sec-intro">Review, drafting, intake, deadlines, billing, and flat-fee pricing, connected. Here's the full set that ships in v5.</p>
+
     <div class="tools-grid">
-      <div class="tool"><div class="k">Start here</div><h3>Practice Dashboard</h3><p>Every tracked matter&#39;s budget status, every extracted deadline (overdue plus the next 90 days), and recent activity — one screen, built from local data, no AI calls, opens instantly.</p></div>
-      <div class="tool"><div class="k">The core review</div><h3>Single Review</h3><p>Upload a contract (PDF, DOCX, TXT) and get risk-ranked clause findings, suggested redlines, missing-provision alerts, a plain-English client email draft, and a Word review memo — in about a minute.</p></div>
-      <div class="tool"><div class="k">A whole stack at once</div><h3>Batch Review</h3><p>Point it at a diligence pile or vendor-contract stack. Get a ranked risk table across all of them and every memo bundled into one ZIP.</p></div>
-      <div class="tool"><div class="k">See what really changed</div><h3>Counter-Draft Comparison</h3><p>Upload your draft and opposing counsel&#39;s revision. Every substantive change is flagged <strong>IMPROVED / NEUTRAL / WORSE</strong> for your side, each with an accept-or-push-back recommendation and a comparison memo.</p></div>
-      <div class="tool"><div class="k">Client email to memo</div><h3>Matter Intake</h3><p>Paste a client email or call notes and get a structured New Matter Memo: conflict-check names, adverse parties, fact timeline, potential claims, deadlines to verify, and the questions to ask next. Word export.</p></div>
-      <div class="tool"><div class="k">Never miss a window</div><h3>Deadlines to Calendar</h3><p>Extract every deadline and obligation, anchor "120 days before expiration" to real dates, and export an <strong>.ics file</strong> that drops into Outlook or Google Calendar with 7-day reminders.</p></div>
-      <div class="tool"><div class="k">For the 200-page days</div><h3>Long-Document Summarizer</h3><p>Leases, depositions, records beyond any single AI pass — chunked, extracted, and synthesized into an executive summary with location-tagged points and short verbatim quotes. Focus modes: general, dates, risk, testimony.</p></div>
-      <div class="tool"><div class="k">Draft in your voice</div><h3>Drafting Studio</h3><p>Demand letters from your facts and chosen tone; flat-fee engagement letters generated from any tracked matter. By design the AI never cites statutes or case law and brackets every jurisdiction-specific item as a <code>[PLACEHOLDER]</code>.</p></div>
-      <div class="tool"><div class="k">Survive e-billing review</div><h3>Billing Narratives</h3><p>Rough time notes in, compliant narratives out — with block-billing, vague-entry, and clerical-task flags. CSV export for your billing system.</p></div>
-      <div class="tool"><div class="k">Price flat fees with nerve</div><h3>Flat-Fee Pricing (AFA)</h3><p>Describe an engagement, get a phased scope with hour ranges, assumptions, exclusions, change-order triggers, and a suggested fee. Then log hours and watch budget-% and your effective hourly rate climb, with 80% / 100% alerts.</p></div>
-      <div class="tool"><div class="k">Stop reinventing redlines</div><h3>Clause Library</h3><p>Save approved redlines from any review with one click, search them, and export the whole library to Word. Your individual work product becomes a reusable firm asset — stored locally.</p></div>
+
+      <div class="tool">
+        <div class="k">Start here</div>
+        <h3>Practice Dashboard</h3>
+        <p>Every tracked matter's budget status, every extracted deadline (overdue plus the next 90 days), and recent activity — one screen, built from local data, no AI calls, opens instantly.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">The core review</div>
+        <h3>Single Review</h3>
+        <p>Upload a contract (PDF, DOCX, TXT) and get risk-ranked clause findings, suggested redlines, missing-provision alerts, a plain-English client email draft, and a Word review memo — in about a minute.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">A whole stack at once</div>
+        <h3>Batch Review</h3>
+        <p>Point it at a diligence pile or vendor-contract stack. Get a ranked risk table across all of them and every memo bundled into one ZIP.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">See what really changed</div>
+        <h3>Counter-Draft Comparison</h3>
+        <p>Upload your draft and opposing counsel's revision. Every substantive change is flagged <strong>IMPROVED / NEUTRAL / WORSE</strong> for your side, each with an accept-or-push-back recommendation and a comparison memo.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">Client email → memo</div>
+        <h3>Matter Intake</h3>
+        <p>Paste a client email or call notes and get a structured New Matter Memo: conflict-check names, adverse parties, fact timeline, potential claims, deadlines to verify, and the questions to ask next. Word export.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">Never miss a window</div>
+        <h3>Deadlines → Calendar</h3>
+        <p>Extract every deadline and obligation, anchor "120 days before expiration" to real dates, and export an <strong>.ics file</strong> that drops into Outlook or Google Calendar with 7-day reminders.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">For the 200-page days</div>
+        <h3>Long-Document Summarizer</h3>
+        <p>Leases, depositions, records beyond any single AI pass — chunked, extracted, and synthesized into an executive summary with location-tagged points and short verbatim quotes. Focus modes: general, dates &amp; obligations, risk, testimony.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">Draft in your voice</div>
+        <h3>Drafting Studio</h3>
+        <p>Demand letters from your facts and chosen tone; flat-fee engagement letters generated from any tracked matter. By design the AI never cites statutes or case law and brackets every jurisdiction-specific item as a <code>[PLACEHOLDER]</code>.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">Survive e-billing review</div>
+        <h3>Billing Narratives</h3>
+        <p>Rough time notes in, compliant narratives out — with block-billing, vague-entry, and clerical-task flags. CSV export for your billing system.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">Price flat fees with nerve</div>
+        <h3>Flat-Fee Pricing (AFA)</h3>
+        <p>Describe an engagement → phased scope with hour ranges, assumptions, exclusions, change-order triggers, and a suggested fee. Then log hours against the quote and watch budget-% and your effective hourly rate climb, with 80% / 100% alerts.</p>
+      </div>
+
+      <div class="tool">
+        <div class="k">Stop reinventing redlines</div>
+        <h3>Clause Library</h3>
+        <p>Save approved redlines from any review with one click, search them, and export the whole library to Word. Your individual work product becomes a reusable firm asset — stored locally.</p>
+      </div>
+
     </div>
-    <p class="sec-intro" style="margin-top:34px">Plus <strong>5 expert playbooks</strong> (Services/MSA, NDA, Employment US, SaaS Subscription, Commercial Lease — about 58 checks, each editable and flippable between vendor- and client-side), one-click <strong>client status updates</strong> that never leak your internal hours, and full <strong>local review history</strong>.</p>
+
+    <p class="sec-intro" style="margin-top:34px">Plus <strong>5 expert playbooks</strong> (Services/MSA · NDA · Employment US · SaaS Subscription · Commercial Lease — ~58 checks, each editable and flippable between vendor- and client-side), one-click <strong>client status updates</strong> that never leak your internal hours, and full <strong>local review history</strong>.</p>
   </div>
 </section>
+
+<!-- PRIVACY / LOCAL -->
 <section class="privacy">
   <div class="wrap">
     <div class="sec-label">Runs on your machine</div>
     <h2 class="sec">Client files that never leave your computer.</h2>
     <div class="privacy-grid">
-      <div class="pv"><div class="icon">&#9670;</div><h3>Local by default</h3><p>Your matters, documents, and library live on your own disk. The dashboard and matter tracking run with no external calls at all.</p></div>
-      <div class="pv"><div class="icon">&#9670;</div><h3>You bring the key</h3><p>Analysis text goes only to the AI provider <em>you</em> choose — Anthropic or OpenAI — under your own API account and their terms. Your key is entered at runtime and never stored. Usage is billed to you, typically cents per contract.</p></div>
-      <div class="pv"><div class="icon">&#9670;</div><h3>Try before you key in</h3><p>A full Demo mode runs the entire workflow on bundled sample contracts with no API key and zero network calls — so you can evaluate everything before you buy or connect an account.</p></div>
+      <div class="pv">
+        <div class="icon">◆</div>
+        <h3>Local by default</h3>
+        <p>Your matters, documents, and library live on your own disk. The dashboard and tracking run with no external calls at all.</p>
+      </div>
+      <div class="pv">
+        <div class="icon">◆</div>
+        <h3>You bring the key</h3>
+        <p>Analysis text goes only to the AI provider <em>you</em> choose — Anthropic or OpenAI — under your own API account and their terms. Your key is entered at runtime and never stored. Usage is billed to you, typically cents per contract.</p>
+      </div>
+      <div class="pv">
+        <div class="icon">◆</div>
+        <h3>Try before you key in</h3>
+        <p>A full Demo mode runs the entire workflow on bundled sample contracts with no API key and zero network calls — so you can evaluate everything before you buy or connect an account.</p>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- PRICING -->
 <section id="pricing">
   <div class="wrap">
     <div style="text-align:center">
@@ -219,79 +363,142 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <h2 class="sec" style="margin:0 auto">Buy once. Own it.</h2>
       <p class="sec-intro" style="margin:16px auto 0">No subscription, no renewals. Prices shown in your local currency at checkout.</p>
     </div>
+
     <div class="price-grid">
       <div class="plan">
         <h3>Solo</h3>
         <p class="who">One attorney, one machine.</p>
         <div class="amt"><span class="num">$149</span><span class="once">one-time</span></div>
-        <ul><li>All eleven tools</li><li>Single user license</li><li>Free updates within v5.x</li></ul>
+        <ul>
+          <li>All eleven tools</li>
+          <li>Single user license</li>
+          <li>Free updates within v5.x</li>
+        </ul>
         <button class="buy" data-buy="solo">Buy Solo</button>
       </div>
+
       <div class="plan featured">
         <span class="badge">For small firms</span>
         <h3>Firm</h3>
         <p class="who">Up to five attorneys.</p>
         <div class="amt"><span class="num">$349</span><span class="once">one-time</span></div>
-        <ul><li>Everything in Solo</li><li>Up to 5 users</li><li>Free updates within v5.x</li></ul>
+        <ul>
+          <li>Everything in Solo</li>
+          <li>Up to 5 users</li>
+          <li>Free updates within v5.x</li>
+        </ul>
         <button class="buy" data-buy="firm">Buy Firm</button>
       </div>
     </div>
     <p class="price-foot">Secure checkout by Paddle, our authorized reseller. Download link delivered on purchase.</p>
   </div>
 </section>
+
+<!-- FAQ -->
 <section id="faq">
   <div class="wrap">
     <div class="sec-label">Straight answers</div>
     <h2 class="sec">Frequently asked.</h2>
     <div class="faq">
-      <details open><summary>Does ClauseLens do legal research?</summary><p>No, deliberately. It doesn''t search case law or statutes and won''t cite authorities. that&#39;s the safeguard: AI that fabricates citations has gotten attorneys sanctioned, and this tool is built so it can''t happen through it. Keep using your research tools for research; use ClauseLens for review, drafting, and running the practice.</p></details>
-      <details><summary>Is this a subscription?</summary><p>No. ClauseLens is a one-time purchase — Solo $149 or Firm $349. You download the app and own it. Free updates within the v5.x line are included.</p></details>
-      <details><summary>Where does my client data go?</summary><p>Nothing is uploaded to us — ever. The app runs on your own computer, and the dashboard and matter tracking make no external calls. When you run a review or draft, the document text goes only to the AI provider you configure (Anthropic or OpenAI), under your own API account and their terms. Confirm that setup meets your bar&#39;s confidentiality rules before using it on client documents.</p></details>
-      <details><summary>What do I need to run it?</summary><p>Python 3.10+ (free from python.org) and an Anthropic or OpenAI API key for live analysis. Setup is a one-time <code>pip install</code>, then launch in your browser — the README walks through it in about five minutes. No key needed to try Demo mode.</p></details>
-      <details><summary>Can I get a refund?</summary><p>See our <a href="/refund.html">Refund Policy</a>. Because this is an instantly-downloadable digital product, refund terms are specific — please read them before purchase.</p></details>
+      <details open="">
+        <summary>Does ClauseLens do legal research?</summary>
+        <p>No — deliberately. It doesn't search case law or statutes and won't cite authorities. That's the safeguard: AI that fabricates citations has gotten attorneys sanctioned, and this tool is built so it can't happen through it. Keep using your research tools for research; use ClauseLens for review, drafting, and running the practice.</p>
+      </details>
+      <details>
+        <summary>Is this a subscription?</summary>
+        <p>No. ClauseLens is a one-time purchase — Solo $149 or Firm $349. You download the app and own it. Free updates within the v5.x line are included.</p>
+      </details>
+      <details>
+        <summary>Where does my client data go?</summary>
+        <p>Nothing is uploaded to us — ever. The app runs on your own computer, and the dashboard and matter tracking make no external calls. When you run a review or draft, the document text goes only to the AI provider you configure (Anthropic or OpenAI), under your own API account and their terms. Confirm that setup meets your bar's confidentiality rules before using it on client documents.</p>
+      </details>
+      <details>
+        <summary>What do I need to run it?</summary>
+        <p>Python 3.10+ (free from python.org) and an Anthropic or OpenAI API key for live analysis. Setup is a one-time <code>pip install</code>, then launch in your browser — the README walks through it in about five minutes. No key needed to try Demo mode.</p>
+      </details>
+      <details>
+        <summary>Can I get a refund?</summary>
+        <p>See our <a href="file:///C:/refund.html">Refund Policy</a>. Because this is an instantly-downloadable digital product, refund terms are specific — please read them before purchase.</p>
+      </details>
     </div>
   </div>
 </section>
+
+<!-- FOOTER -->
 <footer class="site">
   <div class="wrap">
     <div class="foot-top">
       <div class="brand"><span class="mark"></span>ClauseLens</div>
       <nav class="foot-links">
-        <a href="#tools">Tools</a>
-        <a href="#pricing">Pricing</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/refund.html">Refund Policy</a>
+        <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#tools">Tools</a>
+        <a href="file:///C:/Users/kusam/Downloads/clauselens-index_1.html#pricing">Pricing</a>
+        <a href="file:///C:/terms.html">Terms</a>
+        <a href="file:///C:/privacy.html">Privacy</a>
+        <a href="file:///C:/refund.html">Refund Policy</a>
         <a href="mailto:atsuko@shelliecom.com">Contact</a>
       </nav>
     </div>
-    <p class="foot-legal">ClauseLens is software for legal professionals. It is a drafting and review aid, not a provider of legal advice, and it does not perform legal research or cite legal authorities. You remain responsible for all professional judgment and for verifying any output before use.<br /><br />Sold by AOKI HIROSHI. Support: atsuko@shelliecom.com. Payments processed by Paddle.com as authorized reseller.</p>
+    <p class="foot-legal">
+      ClauseLens is a desktop software product for legal professionals. It is a drafting and review aid, not a provider of legal advice, and it does not perform legal research or cite legal authorities. You remain responsible for all professional judgment and for verifying any output before use.<br><br>
+      Sold by AOKI HIROSHI. Support: atsuko@shelliecom.com. Payments processed by Paddle.com as authorized reseller.
+    </p>
   </div>
 </footer>
+
 <div id="status" role="status"></div>
-<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+
+<script src="./ClauseLens — The contract toolkit that won&#39;t cite law it can&#39;t verify_files/paddle.js.ダウンロード"></script>
 <script>
+/* =======================================================================
+ * CONFIG — fill these in with your ONE-TIME (not subscription) Paddle data.
+ * 1) CLIENT_TOKEN: Paddle sandbox client-side token (starts with "test_").
+ * 2) PRICE_IDS: create ONE-TIME prices for Solo ($149) and Firm ($349) in
+ *    Paddle (Catalog > Products), then paste their pri_... IDs here.
+ *    The IDs from today&#39;s SUBSCRIPTION catalog will NOT work for one-time.
+ * 3) After purchase, deliver the download: set it in Paddle
+ *    (Checkout settings / digital product delivery) — not in this file.
+ * ======================================================================= */
 var CLIENT_TOKEN = "test_472e6511ae8ad4d97fafca91758";
-var PRICE_IDS = { solo: "pri_01kxvsm2f14d63h3h12tjgxfm7", firm: "pri_01kxvsm2yrdqhas72fj5v2kbd4" };
+var PRICE_IDS = {
+  solo: "pri_01kxvsm2f14d63h3h12tjgxfm7",
+  firm: "pri_01kxvsm2yrdqhas72fj5v2kbd4"
+};
+
 var statusEl = document.getElementById("status");
 var t;
-function toast(msg, cls){ statusEl.textContent = msg; statusEl.className = "show " + (cls || ""); clearTimeout(t); t = setTimeout(function(){ statusEl.className = ""; }, 6000); }
+function toast(msg, cls){
+  statusEl.textContent = msg;
+  statusEl.className = "show " + (cls || "");
+  clearTimeout(t); t = setTimeout(function(){ statusEl.className = ""; }, 6000);
+}
+
 var ready = false;
 try {
-  Paddle.Environment.set("sandbox");
-  Paddle.Initialize({ token: CLIENT_TOKEN, eventCallback: function(ev){
-    if (ev.name === "checkout.completed") toast("Purchase complete — check your email for the download link.", "");
-    if (ev.name === "checkout.error"){ console.error(ev); toast("Checkout error — see console (F12).", "err"); }
-  }});
+  Paddle.Environment.set("sandbox"); // change to "production" when live
+  Paddle.Initialize({
+    token: CLIENT_TOKEN,
+    eventCallback: function(ev){
+      if (ev.name === "checkout.completed") toast("Purchase complete — check your email for the download link.", "");
+      if (ev.name === "checkout.error"){ console.error(ev); toast("Checkout error — see console (F12).", "err"); }
+    }
+  });
   ready = true;
 } catch (e){ console.error(e); toast("Paddle failed to initialize — is the client token set?", "err"); }
+
 document.querySelectorAll("[data-buy]").forEach(function(btn){
   btn.addEventListener("click", function(){
     var id = PRICE_IDS[btn.getAttribute("data-buy")];
-    if (!ready){ toast("Checkout not ready.", "err"); return; }
-    Paddle.Checkout.open({ items: [{ priceId: id, quantity: 1 }], settings: { displayMode: "overlay", variant: "one-page" } });
+    if (!ready || CLIENT_TOKEN.indexOf("REPLACE") === 0 || String(id).indexOf("REPLACE") === 0){
+      toast("Set your client token and one-time price IDs in index.html first.", "err");
+      return;
+    }
+    Paddle.Checkout.open({
+      items: [{ priceId: id, quantity: 1 }],
+      settings: { displayMode: "overlay", variant: "one-page" }
+    });
   });
 });
 </script>
-</body>
-</html>
+
+
+</body></html>
