@@ -454,17 +454,17 @@
 <script>
 /* =======================================================================
  * CONFIG — fill these in with your ONE-TIME (not subscription) Paddle data.
- * 1) CLIENT_TOKEN: Paddle sandbox client-side token (starts with "test_").
+ * 1) CLIENT_TOKEN: Paddle live client-side token (starts with "live_").
  * 2) PRICE_IDS: create ONE-TIME prices for Solo ($149) and Firm ($349) in
  *    Paddle (Catalog > Products), then paste their pri_... IDs here.
  *    The IDs from today&#39;s SUBSCRIPTION catalog will NOT work for one-time.
  * 3) After purchase, deliver the download: set it in Paddle
  *    (Checkout settings / digital product delivery) — not in this file.
  * ======================================================================= */
-var CLIENT_TOKEN = "test_472e6511ae8ad4d97fafca91758";
+var CLIENT_TOKEN = "live_a6d141a888758d44356b44229a8";
 var PRICE_IDS = {
-  solo: "pri_01kxvsm2f14d63h3h12tjgxfm7",
-  firm: "pri_01kxvsm2yrdqhas72fj5v2kbd4"
+  solo: "pri_01kxv0v76x1er5chx2hxgm0xqn",
+  firm: "pri_01ky03zsp0qs830g7ax77ze33s"
 };
 
 var statusEl = document.getElementById("status");
@@ -477,7 +477,6 @@ function toast(msg, cls){
 
 var ready = false;
 try {
-  Paddle.Environment.set("sandbox"); // change to "production" when live
   Paddle.Initialize({
     token: CLIENT_TOKEN,
     eventCallback: function(ev){

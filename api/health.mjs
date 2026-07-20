@@ -29,10 +29,10 @@ export default async function handler(req, res) {
     missing,
     set,
     config: {
-      PADDLE_API_BASE: process.env.PADDLE_API_BASE || "https://sandbox-api.paddle.com (default)",
+      PADDLE_API_BASE: process.env.PADDLE_API_BASE || "https://api.paddle.com (default)",
       BASE_URL: process.env.BASE_URL || null,
-      PRICE_SOLO: process.env.PRICE_SOLO || "pri_01kxvsm2f14d63h3h12tjgxfm7 (default)",
-      PRICE_FIRM: process.env.PRICE_FIRM || "pri_01kxvsm2yrdqhas72fj5v2kbd4 (default)",
+      PRICE_SOLO: process.env.PRICE_SOLO || "pri_01kxv0v76x1er5chx2hxgm0xqn (default)",
+      PRICE_FIRM: process.env.PRICE_FIRM || "pri_01ky03zsp0qs830g7ax77ze33s (default)",
       LINK_TTL_HOURS: process.env.LINK_TTL_HOURS || "48 (default)",
     },
   });

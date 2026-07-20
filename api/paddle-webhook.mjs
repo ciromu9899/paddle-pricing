@@ -9,18 +9,18 @@
 //   FROM_EMAIL              e.g. "ClauseLens <no-reply@gipan-bite.tech>"
 //   BASE_URL                e.g. "https://gipan-bite.tech"
 // Optional:
-//   PRICE_SOLO   (default: known Solo price id)   PRICE_FIRM (default: known Firm price id)
+//   PRICE_SOLO   (default: live Solo price id)   PRICE_FIRM (default: live Firm price id)
 //   LINK_TTL_HOURS (default: 48)
-//   PADDLE_API_BASE (default sandbox; set to https://api.paddle.com for production)
+//   PADDLE_API_BASE (default: https://api.paddle.com)
 
 import crypto from "node:crypto";
 
 export const config = { api: { bodyParser: false } };
 
-const PRICE_SOLO = process.env.PRICE_SOLO || "pri_01kxvsm2f14d63h3h12tjgxfm7";
-const PRICE_FIRM = process.env.PRICE_FIRM || "pri_01kxvsm2yrdqhas72fj5v2kbd4";
+const PRICE_SOLO = process.env.PRICE_SOLO || "pri_01kxv0v76x1er5chx2hxgm0xqn";
+const PRICE_FIRM = process.env.PRICE_FIRM || "pri_01ky03zsp0qs830g7ax77ze33s";
 const TTL_HOURS = Number(process.env.LINK_TTL_HOURS || 48);
-const PADDLE_API_BASE = process.env.PADDLE_API_BASE || "https://sandbox-api.paddle.com";
+const PADDLE_API_BASE = process.env.PADDLE_API_BASE || "https://api.paddle.com";
 
 function readRaw(req) {
   return new Promise((resolve, reject) => {
