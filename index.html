@@ -2,8 +2,19 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ClauseLens — The contract toolkit that won't cite law it can't verify</title>
-<meta name="description" content="A desktop AI toolkit for solo and small-firm attorneys. Eleven tools for review, drafting, and practice management. Runs on your machine. One-time purchase — no subscription.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='.9em' font-size='56'%3E%E2%9A%96%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<title>ClauseLens — Local-first contract review toolkit for attorneys</title>
+<meta name="description" content="A local-first desktop toolkit for solo and small-firm attorneys. Review contracts, organize matters, draft first-pass work, and export editable files with attorney review kept in control.">
+<link rel="canonical" href="https://gipan-bite.tech/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gipan-bite.tech/">
+<meta property="og:title" content="ClauseLens — Move first-pass contract work forward">
+<meta property="og:description" content="Eleven local-first tools, editable playbooks, Demo mode, and source-aware output checks for solo and small-firm attorneys.">
+<meta property="og:image" content="https://gipan-bite.tech/assets/clauselens-review-results.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ClauseLens — Local-first contract review toolkit">
+<meta name="twitter:description" content="See a real Demo-mode contract review before you buy.">
+<meta name="twitter:image" content="https://gipan-bite.tech/assets/clauselens-review-results.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
@@ -79,6 +90,22 @@
   .lens{display:flex;gap:12px;margin-top:20px;padding:14px 16px;background:#faf6f2;
     border:1px solid #ecdcd6;border-radius:9px;font-family:"Inter",sans-serif;font-size:13.5px;line-height:1.5}
   .lens .tag{flex:none;font-weight:600;color:var(--seal);text-transform:uppercase;letter-spacing:.06em;font-size:11px;padding-top:2px}
+
+  /* ---- proof gallery ---- */
+  .evidence{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:38px}
+  @media(max-width:820px){.evidence-grid{grid-template-columns:1fr}}
+  .evidence-card{border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
+  .evidence-card img{display:block;width:100%;height:auto;background:#eef1f5;border-bottom:1px solid var(--line)}
+  .evidence-copy{padding:20px 22px 22px}
+  .evidence-copy h3{font-size:18px;margin-bottom:7px}
+  .evidence-copy p{font-size:14px;color:var(--muted);line-height:1.6}
+  .evidence-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+  .evidence-note{font-size:13px;color:var(--muted);max-width:58ch}
+  .security-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px}
+  @media(max-width:680px){.security-list{grid-template-columns:1fr}}
+  .security-item{padding:15px 16px;border:1px solid var(--line);border-radius:9px;background:#f8f9fb;font-size:13.5px;color:#39414d}
+  .security-item strong{display:block;color:var(--ink);margin-bottom:3px}
 
   /* ---- section scaffold ---- */
   section{padding:72px 0}
@@ -182,6 +209,8 @@
   <div class="wrap nav">
     <div class="brand"><span class="mark"></span>ClauseLens</div>
     <nav class="nav-links">
+      <a href="/products.html">All products</a>
+      <a href="#evidence">See it work</a>
       <a href="#refuse">Why it's different</a>
       <a href="#tools">Tools</a>
       <a href="#pricing">Pricing</a>
@@ -195,13 +224,13 @@
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">For solo &amp; small-firm attorneys</span>
-    <h1>The contract toolkit that <em>won't cite law it can't verify.</em></h1>
-    <p class="lead">Eleven local-first tools for contract review, matter intake, deadlines, drafting, long-document summaries, billing narratives, flat-fee tracking, and clause knowledge management. The drafting prompts are designed not to supply statutes or case-law citations. A qualified attorney must verify every output before use.</p>
+    <h1>Move first-pass contract work forward. <em>Keep attorney review in control.</em></h1>
+    <p class="lead">Eleven local-first tools for contract review, matter intake, deadlines, drafting, long-document summaries, billing narratives, flat-fee tracking, and clause knowledge management. Source-aware validation checks generated quotes against the uploaded document, while drafting instructions are designed not to supply statutes or case-law citations. A qualified attorney must verify every output before use.</p>
     <div class="hero-cta">
-      <a href="#pricing" class="btn btn-primary">See pricing</a>
-      <a href="#refuse" class="btn btn-ghost">Why it refuses to research law</a>
+      <a href="#evidence" class="btn btn-primary">See a real review</a>
+      <a href="#pricing" class="btn btn-ghost">See pricing</a>
     </div>
-    <p class="hero-note"><strong>One-time purchase.</strong> No subscription. Try everything free in Demo mode before you buy.</p>
+    <p class="hero-note"><strong>One-time purchase.</strong> No subscription. Review real screenshots and a sample Word memo before you buy; the downloaded package includes Demo mode with no API key required.</p>
 
     <!-- proof bar: the sanction that made this a real risk -->
     <div class="proof">
@@ -221,6 +250,45 @@
           <span>Uncapped indemnity that reaches the counterparty's own negligence. Flagged for review. ClauseLens marks the exposure and the reasoning — it does not tell you the governing law or cite a case for it. That call stays with you.</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- REAL PRODUCT EVIDENCE -->
+<section class="evidence" id="evidence">
+  <div class="wrap">
+    <div class="sec-label">Captured from the shipping app</div>
+    <h2 class="sec">See the workflow before you buy.</h2>
+    <p class="sec-intro">These are unretouched screenshots from ClauseLens v5.0 running locally in bundled Demo mode against the included fictional sample agreement. No external AI call was used.</p>
+
+    <div class="evidence-grid">
+      <article class="evidence-card">
+        <img src="/assets/clauselens-dashboard.png" alt="ClauseLens local practice dashboard showing matters, deadlines, activity, and locally saved history" loading="lazy">
+        <div class="evidence-copy">
+          <h3>Local practice dashboard</h3>
+          <p>Review history, matter budgets, upcoming deadlines, and the clause library stay on the computer running ClauseLens.</p>
+        </div>
+      </article>
+      <article class="evidence-card">
+        <img src="/assets/clauselens-review-results.png" alt="ClauseLens Demo-mode review showing an overall risk score and risk-ranked contract findings" loading="lazy">
+        <div class="evidence-copy">
+          <h3>Risk-ranked review with editable export</h3>
+          <p>The included sample produces a summary, an overall risk score, ranked findings, and a downloadable Word review memo.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="security-list" aria-label="Security and output controls">
+      <div class="security-item"><strong>Local-only listener</strong>The app launch configuration binds to 127.0.0.1 rather than the local network.</div>
+      <div class="security-item"><strong>Usage statistics disabled</strong>The packaged Streamlit configuration disables framework telemetry.</div>
+      <div class="security-item"><strong>Prompt Injection boundaries</strong>Uploaded contract text is treated as untrusted content, not as instructions.</div>
+      <div class="security-item"><strong>Output validation</strong>Structured findings, risk values, playbook categories, and source quotes are checked before export.</div>
+    </div>
+
+    <div class="evidence-actions">
+      <a class="btn btn-primary" href="/assets/clauselens-sample-review-memo.docx" download>Download sample Word memo</a>
+      <a class="btn btn-ghost" href="#pricing">Choose a license</a>
+      <p class="evidence-note">The sample files use fictional parties and are provided only to show output format. Actual AI output may contain errors or omissions and requires qualified attorney review.</p>
     </div>
   </div>
 </section>
@@ -390,9 +458,7 @@
         <button class="buy" data-buy="firm">Buy Firm</button>
       </div>
     </div>
-    <p class="price-foot">Secure checkout by Paddle, our authorized reseller. Download link delivered on purchase.<br>
-      Prefer Gumroad? <a href="https://atsukoshellie.gumroad.com/l/clauselens-v5-solo" rel="noopener noreferrer">Buy Solo on Gumroad</a> or <a href="https://atsukoshellie.gumroad.com/l/clauselens-v5-firm" rel="noopener noreferrer">Buy Firm on Gumroad</a>.
-    </p>
+    <p class="price-foot">Secure checkout by Paddle, our authorized reseller. Download link delivered on purchase.</p>
   </div>
 </section>
 
@@ -422,6 +488,10 @@
         <summary>Can I get a refund?</summary>
         <p>See our <a href="/refund.html">Refund Policy</a>. Because this is an instantly-downloadable digital product, refund terms are specific — please read them before purchase.</p>
       </details>
+      <details>
+        <summary>Can I purchase through Gumroad instead?</summary>
+        <p>Yes. Paddle is the primary checkout on this site. If your organization prefers Gumroad, use the <a href="https://atsukoshellie.gumroad.com/l/clauselens-v5-solo?utm_source=gipan-bite.tech&amp;utm_medium=referral&amp;utm_campaign=checkout_alternative" rel="noopener noreferrer">Solo listing</a> or <a href="https://atsukoshellie.gumroad.com/l/clauselens-v5-firm?utm_source=gipan-bite.tech&amp;utm_medium=referral&amp;utm_campaign=checkout_alternative" rel="noopener noreferrer">Firm listing</a>.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -433,6 +503,7 @@
       <div class="brand"><span class="mark"></span>ClauseLens</div>
       <nav class="foot-links">
         <a href="#tools">Tools</a>
+        <a href="/products.html">All products</a>
         <a href="#pricing">Pricing</a>
         <a href="/terms.html">Terms</a>
         <a href="/privacy.html">Privacy</a>
@@ -451,6 +522,22 @@
 <div id="status" role="status"></div>
 
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ClauseLens v5.0",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "A local-first contract review and legal-practice toolkit for solo and small-firm attorneys.",
+  "url": "https://gipan-bite.tech/",
+  "image": "https://gipan-bite.tech/assets/clauselens-review-results.png",
+  "offers": [
+    {"@type":"Offer","name":"Solo License","price":"149","priceCurrency":"USD","availability":"https://schema.org/InStock"},
+    {"@type":"Offer","name":"Firm License","price":"349","priceCurrency":"USD","availability":"https://schema.org/InStock"}
+  ]
+}
+</script>
 <script>
 /* =======================================================================
  * CONFIG — fill these in with your ONE-TIME (not subscription) Paddle data.
